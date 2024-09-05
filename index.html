@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Website</title>
+    
+    <!---font  awsome cdn link--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+    <!--custom css file--> 
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!--header section starts-->
+
+<header>
+
+    <a href="#" class="logo"><i class="fas fa-utensils"></i>Foodies..</a>
+    
+    <nav class="navbar">
+        <a class="active" href="#home">home</a>
+        <a href="#dishes">dishes</a>
+        <a href="#about">about</a>
+        <a href="#menu">menu</a>
+        <a href="#review">review</a>
+        <a href="#order">order</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon" onclick=" searchform()"></i>
+        <i class="fa fa-user" id="user" onclick="signinform()"></i>
+    </div>
+
+</header>
+<!--header section ends-->
+
+<!--search form -->
+<form action="" id="search-form">
+    <input type="search" placeholder="search here.." name="" id="search-box">
+    <a href="#menu"><label for="search-box" class="fas fa-search" id="searchicon" onclick="gotomenu()"></label></a>
+    <i class="fas fa-times" id="close" onclick="closesearchform()"></i>
+</form>
+<!--search form end-->
+
+<!--Sign in form -->
+<form action="" id="signin-form">
+    <input type="label" value="LOGIN HERE" name="" id="loginlbl">
+    <br><br>
+    <input type="text" placeholder="Username" name="" id="username" onblur="validateusername()"> 
+   <br ><br><span  class="inputborder" id="usernamee">  </span>
+    <br><br>
+    <input type="text" placeholder="Password" name="" id="password" onblur="validatepass()">
+    <br ><br><span  class="inputborder" id="passwordd">  </span>
+    <br><br>
+    <a href="#home"><input type="button" value="Login" name="" id="login" onclick="closesigninform()" ></a>
+    <br><br><br><br>
+    <a href="SignUp.html" id="createacc">Do You Want To Create New Account?</a>
+    <i class="fas fa-times" id="close" onclick="closesigninform()"></i>
+</form>
+<!--Sign in form end-->
+
+<!--home section start -->
+ 
+<section class="home" id="home">
+    <div class="content">
+        <h3>food made with love</h3>
+        <p>Ham Burger is a good source of protein, iron, phosphorus, and several other nutrients. If you choose to eat your hamburger on a whole grain bun, it may also provide healthy, filling fiber.</p>
+        <a href="#order" class="btn">order now</a>
+    </div>
+
+    <div class="image">
+        <img src="images/home-img.png" alt="">
+    </div>
+
+    
+</section>
+<!--home section ends -->
+
+<!--Dishes section start-->
+
+
+<section class="dishes" id="dishes">
+    <h3 class="sub-heading">our dishes</h3>
+    <h1 class="heading">popular dishes</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+    
+        <img class="image" src="images//hamburger.jfif" alt="" width="200" height="200" >
+        <div class="content">
+        <h3>Ham Burger</h3>
+        <p>A hamburger (or burger for short) is a food, typically considered a sandwich, consisting of one or more cooked patties—usually ground meat, typically beef—placed inside a sliced bread roll or bun. 
+            The patty may be pan fried, grilled, smoked or flame broiled. ... A hamburger topped with cheese is called a cheeseburger.</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+           <span>Rs.199</span> 
+        </div>
+        <center><a href="#" class="btn" >add to cart</a></center>
+    </div>
+    
+
+    <div class="box">
+        <img class="image" src="images/taco.jfif" alt="" width="100" height="100">
+        <div class="content">
+
+        <h3>taco</h3>
+        <p>A taco s a traditional Mexican dish consisting of a small hand-sized corn or wheat
+             tortilla topped with a filling. The tortilla is then folded around the filling. A taco can be made with a
+              variety of fillings, including beef, pork, chicken, seafood, beans, 
+             vegetables, and cheese, allowing for great versatility and variety. </p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+             </div>
+
+            <span>Rs.99</span>
+            <center><a href="#" class="btn" >add to cart</a></center>
+        </div>
+        
+    </div>
+
+    <div class="box">
+        <img class="image" src="images/sandwich.jfif" width="100" height="100">
+        <div class="content">
+        
+        <h3>Sandwich</h3>
+        <p>A cheese sandwich is a 
+            sandwich made with cheese on bread. Typically semi-hard cheeses 
+            are used for the filling, such as Cheddar, Red Leicester.</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+             </div>
+
+            <span>Rs.45</span>
+            <center><a href="#" class="btn" >add to cart</a></center> 
+        </div>
+    </div>
+
+    <div class="box">
+        <img class="image" src="images/simplepizza.jfif" width="100" height="100">
+        <div class="content">
+        
+        <h3>Paneer Pizza</h3>
+        <p>A dish made typically of flattened bread dough spread
+             with a savory mixture usually including 
+            tomatoes and cheese and often other toppings and baked.In panner pizza it include panneer.</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+             </div>
+
+            <span>Rs.99</span>
+            <center><a href="#" class="btn" >add to cart</a></center> 
+        </div>
+    </div>
+
+    <div class="box">
+        <img class="image" src="images/Hotdog.jfif" width="100" height="100">
+        <div class="content">
+        
+        <h3>Hot Dog</h3>
+        <p>A hot dog (or hotdog) is is an American fast food.A hot dog (less commonly spelled hotdog) is a food consisting of a grilled or 
+            steamed sausage served in the slit of a partially sliced bun. The term hot dog can also refer to the sausage itself. </p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+             </div>
+
+            <span>Rs.125</span>
+            <center><a href="#" class="btn" >add to cart</a></center>
+        </div>
+    </div>
+
+    <div class="box">
+        <img class="image" src="images/cheeseburger.jfif" width="100" height="100">
+        <div class="content">
+    
+        <h3>Cheese Burger</h3>
+        <p>A cheeseburger is a hamburger topped with cheese. Traditionally, the slice of cheese is placed on top of the meat patty. The cheese is usually added to the cooking hamburger
+             patty shortly before serving, which allows the cheese to melt.A cheeseburger may include toppings such as lettuce, tomato
+             , onion, pickles, bacon, mayonnaise, ketchup, and mustard.</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+             </div>
+
+            <span>Rs.249</span>
+            <center><a href="#" class="btn" >add to cart</a></center>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<!--Dishes ends-->
+
+<!---about section start-->
+
+<section class="about" id="about">
+
+    <h3 class="sub-heading">about us</h3>
+    <h1 class="heading">why choose us? </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/about-img.png" alt="">
+        </div>
+
+        <div class="content">
+            <h3>best food in the country</h3>
+            <p>Our website is about fast food, in today's fastest world we know fast food is how much important,   sometimes because of the office work people do not get  their food on time so  Fast food is work in that. Which can be available anywhere. So we have provided this fast food here.</p>
+            <p>Our speacial dish is Momo is a type of steamed dumpling with some form of filling.A typical serving of a plate of momo with sesame yellow sauce and red ginger chilli pickle, known as "achaar" in Nepalese.<br>Momo is prepared with special spices, which add unique and original taste to suit the Nepalese palate. The third reason is momo's long history. Momo has figured on Nepalese menus for centuries and ithas become part of the national culture.It is believed that Momos came to India in the 1960s when a large number of Tibetans entered the country. They settled in several different parts of the country all the major Momo hotspots that we know and love.</p>
+                 <div class="icons-container">
+                     <div class="icons">
+                         <i class="fas fa-shipping-fast"></i>
+                         <span>free delivery</span>
+                     </div>
+
+                     <div class="icons">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>easy payments</span>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fas fa-headset"></i>
+                        <span>24/7 service </span>
+                    </div>
+                 </div>
+                 <a href="https://en.wikipedia.org/wiki/Momo_(food)" class="btn">learn more</a>
+        </div>
+
+    </div>
+</section>
+<!--about section ends-->
+
+<!-- menu section starts  -->
+
+<section class="menu" id="menu">
+
+    <h3 class="sub-heading"> our menu </h3>
+    <h1 class="heading"> today's speciality </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-1.jpg" alt="">
+
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>French Fries</h3>
+                <p>A thin strip of potato, usually cut 3 to 4 inches in length and about 1/4 to 3/8 inches square that are deep fried until they are golden brown and crisp textured on the outside while remaining white and soft on the inside.</p>
+                <a href="#order" class="btn">order now</a>
+                <span class="price">Rs.12.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-2.jpg" alt="">
+                
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Subway</h3>
+                <p>Subway's turkey sub is its most popular sandwich, according to a rep for the chain. Specifically, the most common order is a footlong turkey sub with a bag of chips on the side.   </p><br>
+                <a href="#order" class="btn">Order Now</a>
+                <span class="price">Rs.70</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-3.jpg" alt="">
+                
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Chicken Nuggets Chick-fil-A</h3>
+                <p>The humble Chick-fil-A nugget is the best portable chicken product on the market, and it is still a reliable indicator of whether a social gathering is worth your time. As Martha Stewart once said, “No nuggets, no party.” Believe her. </p>
+                <a href="#order" class="btn">Order Now</a>
+                <span class="price">Rs.170</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-4.jpg" alt="">
+                
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3> Chicken Tenders Popeyes</h3>
+                <p>Popeyes chicken tenders are an extremely satisfying meal, and not just because their airy, crispy coating packs such a perfect crunch.  </p>
+                <br><br>
+                <a href="#order" class="btn">Order Now</a>
+                <span class="price">Rs. 150</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-5.jpg" alt="">
+                
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Pancake</h3>
+                <p>A pancake is a thin, flat, circular piece of cooked batter made from milk, flour, and eggs. Pancakes are often rolled up or folded and eaten hot with a sweet or savoury filling inside.</p>
+                <a href="#order" class="btn">Order Now</a>
+                <span class="price">Rs.80</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-6.jpg" alt="">
+                
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Cup Cakes</h3>
+                <p>Cupcakes are small, tasty snack cakes. They are batter cakes baked in a cup-shaped foil or temperature resistant paper.</p>
+                <br> <br>
+                <a href="#order" class="btn">Order Now</a>
+                <span class="price">Rs.60</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-7.jpg" alt="">
+                
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Lemonade</h3>
+                <p>Lemonade is a sweetened lemon-flavored beverage. There are varieties of lemonade found throughout the world.</p>
+                <a href="#order" class="btn">Order Now</a>
+                <span class="price">Rs.90</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-8.jpg" alt="">
+                
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Oatmeal</h3>
+                <p>OatMeal is packing serious nutrition and hearty flavor into breakfast for generations. It's one of the few comfort foods that's as good for you as it is just plain good.</p>
+                <a href="#order" class="btn">Order Now</a>
+                <span class="price">Rs.200</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                
+                <img src="images/menu-7.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Lemonade</h3>
+                <p>Lemonade is a sweetened lemon-flavored beverage. There are varieties of lemonade found throughout the world.</p>
+                <a href="#order" class="btn">Order Now</a>
+                <span class="price">Rs.50</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading"> our customers <span>reviews</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box" id="g1"  onmouseover="chngborder1()" onmouseout="newchngborder1()">
+            <img src="images/gita.jfif" alt="" id="imgg1" >
+            <h3>Gitanjali</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>It is really good website.And the service is great.The food has always great quality.Veg and Non-veg everything is here.It is very helpful for all if you want dont prepare food you go for it.I love this website.</p>
+        </div>
+        <div class="box" id="g2"  onmouseover="chngborder2()" onmouseout="newchngborder2()">
+            <img src="images/Tanuja.jpg" alt="" id="imgg2">
+            <h3>Tanuja</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Foodie many times my experience is very good.I really like this website beacause it offer best discount ,best food.It is too easy to use it.The crust was super soft and it was so cheesy .the texture of pizza was too good.loved it</p>
+        </div>
+        <div class="box" id="g3" onmouseover="chngborder3()" onmouseout="newchngborder3()">
+            <img src="images/rohan.jfif" alt="" id="imgg3">
+            <h3>Rohan</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Amazing taste n good quality food. Proper balanced ingredients worth penny wise. Surely going order again will try all oder options in menu 👍</p>
+        </div>
+        
+        <div class="box" id="g5" onmouseover="chngborder5()" onmouseout="newchngborder5()">
+            <img src="images/afrin.jfif" alt="" id="imgg5" >
+            <h3>Afrin</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Foodies this proved true to me.Foodies  is my all time favourite for having pizzas..so coming to the food we ordered @cheese and corn pizza and I was fully satisfied with my choice.</p>
+        </div>
+        <div class="box" id="g6" onmouseover="chngborder6()" onmouseout="newchngborder6()">
+            <img src="images/vijay.jfif" alt="" id="imgg6">
+            <h3>Vijay</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>I tried to order delivery, and the website said the store was closed. I put my rating at 3 stars, instead of 1 star because the store normally delivers to me on time, or even before the time they promised, and their food has generally been correct and tasty. </p>
+        </div>
+        <div class="box" id="g7" onmouseover="chngborder7()" onmouseout="newchngborder7()">
+            <img src="images/vina.jfif" alt="" id="imgg7">
+            <h3>vina</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Great food with amazing packing. I had the penne Momos which was excellent. Though a little less in quantity. The sauce was perfect, momos was well cooked and good amount of veggies thrown in. The garlic bread sucked - soggy and low on garlic.</p>
+        </div>
+        
+    </div>
+</section>
+
+<!-- review section ends -->
+<!--order starts-->
+<section class="order" id="order">
+
+    <h3 class="sub-heading">order now</h3>
+    <h1 class="heading">free and fast</h1>
+
+    <form action="">
+
+        <div class="inputBox">
+            <div class="input">
+                <span>your name</span>
+                <input type="text" id="name" placeholder="enter your name" onblur="validatename()" onblur="disableorderbtn()"   autocomplete="off">
+                <br><span  class="inputborder" id="namee">  </span>
+            </div>
+            <div class="input">
+                <span>your number</span>
+                <input type="text" id="mobile" placeholder="enter your number" onblur="validatemobile()"autocomplete="off">
+                <br><span  class="inputborder" id="mobilee">  </span>
+            </div>
+        </div>
+
+        <div class="inputBox">
+            <div class="input">
+                <span>your order</span>
+                <br>
+                <select id="foodname"  placeholder="enter food name"  onblur="validatefoodname()">
+                   <option value="fd">Select your Food</option>
+                   <option value="brg">Ham Burger</option>
+                   <option value="taco">Taco</option>
+                   <option value="sabdwich">Sandwich</option>
+                   <option value="paneerpizza">Paneer Pizza</option>
+                   <option value="hotdog">Hot Dog</option>
+                   <option value="Cheesebrg">Cheese Burger</option>
+                   <option value="frnchfri">French Fries</option>
+                   <option value="sbway">Subway</option>
+                   <option value="chickenuggets">Chicken Nuggets</option>
+                   <option value="Popeyes">Chicken Tenders Popeyes</option>
+                   <option value="pancake">Pancake </option>
+                   <option value="cupcake">Cupcakes</option>
+                </select>
+                
+                <br><span  class="inputborder" id="foodnamee">  </span>
+            </div>
+            <div class="input">
+                <span>additional food</span>
+                <input type="text" id="extrafood" placeholder="extra with food" onblur="validateextrafood()" autocomplete="off">
+                <br><span  class="inputborder" id="extrafoodd">  </span>
+            </div>
+        </div>
+
+        <div class="inputBox">
+            <div class="input">
+                <span>how much</span>
+                <input type="number" placeholder="how many orders"autocomplete="off">
+            </div>
+            <div class="input">
+                <span>date and time</span>
+                <input type="datetime-local" >
+            </div>
+        </div>
+
+        <div class="inputBox">
+            <div class="input">
+                <span>your address</span>
+                <textarea name="" placeholder="enter your address" id="address" cols="30" rows="10" onblur="validateaddress()" autocomplete="off"></textarea>
+                <br><span  class="inputborder" id="addresss">  </span>
+            </div>
+            <div class="input">
+                <span>your message</span>
+                <textarea name="" placeholder="enter your message" id="message" cols="30" rows="10"onblur="validatemessage()" autocomplete="off"></textarea>
+                <br><span  class="inputborder" id="messagee">  </span>
+            </div>
+        </div>
+
+        <a href="thanku.html" class="btn">Order</a>
+
+    </form>
+
+</section>
+<!--order ends-->
+
+<!--Footer section starts-->
+
+<section class="footer">
+ 
+    <div class="box-container">
+    <div class="box">
+        <h3>locations</h3>
+        <a href=https://goo.gl/maps/Ga9J5XLajYzDMuc19>India</a>
+        <a href=https://goo.gl/maps/rWYsoCvMvwpag72w6 > Japan</a>
+        <a href=https://goo.gl/maps/FsgqfnMSUahRUWJD8> russia</a>
+        <a href=https://goo.gl/maps/RbMBhsg8KHZohtqa9>USA</a>
+        <a href=https://goo.gl/maps/4K4Uzm51H3wbmbm49>france</a>
+    </div>
+
+    <div class="box">
+        <h3>QUICK LINKS</h3>
+        <a href="#home">home</a>
+        <a href="#dishes">dishes</a>
+        <a href="#about">about</a>
+        <a href="#menu">menu</a>
+        <a href="#review">review</a>
+        <a href="#order">order</a>
+    </div>
+
+    <div class="box">
+        <h3>contact info</h3>
+        <a href="#">7066784426</a>
+        <a href="#">8080252106</a>
+        <a href="#">7391966672</a>
+        <a href="#">gitanjalib2004@gmail.com</a>
+        <a href="#">satara, india -415103</a>
+    </div>
+
+    <div class="box">
+        <h3>follow us</h3>
+        <a href="#">facebook</a>
+        <a href="https://twitter.com/misaltanuja?t=dadhto1yzvzez5zcphwiba&s=08">twitter</a>
+        <a href="https://www.instagram.com/tanu__misal/?utm_medium=copy_link">instagram</a>
+        <a href="https://www.linkedin.com/in/gitanjali-bhintade-bb1951227">linkedin</a>
+    </div>
+</div>
+    <div class="credit">copyright @ 2021 by <span>GPK STUDENT</span></div>
+
+</section>
+<!--footer section ends-->
+
+
+
+
+<!--loader starts-->
+<div class="loader-container">
+    <img src="images/loader.gif" alt="">
+</div>
+<!--loader starts-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!--custom js file link-->
+<script src="script.js"> </script>
+
+</body>
+</html>

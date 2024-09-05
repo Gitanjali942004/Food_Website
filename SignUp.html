@@ -1,0 +1,171 @@
+<DOCTYPE !>
+    <html>
+    <head>
+    <title>Sign Up</title>
+    <style>
+   #h3{
+        font-size: xx-large;
+        color: rgb(133, 0, 27);
+        
+    }
+    body  
+    {  
+      
+        margin: 0;  
+        padding: 0; 
+        background-image:url("images/reg.jpg");
+        background-size:cover;
+        background-color:#bb0e81ee;  
+        font-family: 'Arial';  
+    }  
+    .SignUp{  
+    
+           
+    width: 600px;  
+   
+    overflow: hidden; 
+    margin: auto;  
+    margin: 20 0 0 450px;  
+    padding: 15px;  
+    background:white;  
+    border-radius: 10px ;
+
+      
+}  
+    
+    
+    img {
+      border-radius: 70px;
+    } 
+    
+    #name{  
+        background: #eee;
+    border-radius: .5rem;
+    padding: .5rem;
+    font-size: 1rem;
+    color: var(--black);
+    text-transform: none;
+    margin-bottom: 1rem;
+    width: 60%; 
+    }  
+    
+    #pass{  
+        background: #eee;
+    border-radius: .5rem;
+    padding: .5rem;
+    font-size: 1rem;
+    color: var(--black);
+    text-transform: none;
+    margin-bottom: 1rem;
+    width: 60%;
+          
+    }  
+    
+  #submit {
+  background-color: #0603d3;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+   border-radius: 5px;  
+}
+      
+   #Sign{
+      background-color: #09e494;
+      color: white;
+      padding: 10px 10px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 20%;
+       border-radius: 3px;  
+    }
+    
+    h4{
+    color:rgba(223, 7, 36, 0.849);
+    }
+    
+     </style>
+
+     <script>
+function validatename()
+
+{
+    document.getElementById('namee').style.color='red'; 
+    var regName = /^[A-Za-z ]+$/;
+    var name=document.getElementById('name').value;
+
+      if(name =="")
+      {
+        document.getElementById('namee').innerHTML="**Please Enter Your Name**";
+        return false;
+      }
+      if(regName.test(name))
+      {
+       
+        document.getElementById('namee').innerHTML=' ';
+      }
+      else
+      {
+        document.getElementById('namee').innerHTML='**Please Enter Character Only**';
+
+      }
+      if(name.length<2 || name.length>30)
+      {
+        document.getElementById('namee').innerHTML="**Name length must be between 2 and 30**";
+        return false;
+      }
+      
+ }
+
+ function verifyPassword()
+  {  
+    document.getElementById('pwerr').style.color='blue';  
+     var pw = window. document. forms.Form. pass. value;   
+     
+  //check empty password field  
+     if(pw == "") 
+     {  
+     document.getElementById("pwerr").innerHTML = "**Fill the password please!";  
+     return false;  
+     }  
+}  
+  
+    
+     </script>
+     
+    </head>
+<body >
+    <!--Sign up starts-->
+    <br>
+    <center><h2>   .....Welcome to Foodies.....</h2></center>
+    <br>
+    
+    <Form name="Form" id="Form" action="abc.jsp" method="GET"></Form>
+        <div class="SignUp" >
+        
+    <center>
+        <h4 style="font-size:xx-large ;" >SignUp For Order</h4>
+        <div class="img">
+        <img src="images/Chef.jfif"  width="150" height="100"><br>
+        </div><br>
+        <div>
+        <input type="text" name="name" id="name" placeholder="enter your name" onblur="validatename()" autocomplete="off"><br>
+        <span  class="inputborder" id="namee"> </span><br><br>
+        </div>
+
+        <div>
+        <input type="text"  name="pass" id="pass" placeholder="enter your password" onblur="verifyPassword()" autocomplete="off">
+        <br><span  class="inputborder" id="pwerr"> </span><br><br>
+    </div>
+    <br>
+        <br>
+        <a href="index.html"><input type="submit" value=" Sign-Up" size="100" style="background-color:rgb(236, 9, 149);padding: 10px 20px;border-radius: 3px; "  ></a>
+        
+    </div>
+        </Form>
+    </center>
+</body>
+</html>
